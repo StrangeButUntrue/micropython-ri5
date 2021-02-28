@@ -8,7 +8,7 @@ of the features of MicroPython are identical to those described by the
 `docs.python.org <https://docs.python.org/3/reference/index.html>`_.
 
 The MicroPython standard library is described in the
-:ref:`corresponding chapter <micropython_lib>`. The :ref:`cpython_diffs`
+:ref:`corresponding chapter <micropython_lib>`.  Another
 chapter describes differences between MicroPython and CPython (which
 mostly concern standard library and types, but also some language-level
 features).
