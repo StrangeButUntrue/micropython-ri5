@@ -23,7 +23,7 @@ into MicroPython. There are a few categories of such modules:
 * Modules which implement a subset of Python functionality, with a provision
   for extension by the user (via Python code).
 * Modules which implement MicroPython extensions to the Python standard libraries.
-* Modules specific to a particular :term:`MicroPython port` and thus not portable.
+* Modules specific to a particular `MicroPython port` and thus not portable.
 
 Note about the availability of the modules and their contents: This documentation
 in general aspires to describe all modules and functions/classes which are
@@ -38,7 +38,7 @@ in a module (or even the entire module) described in this documentation **may be
 unavailable** in a particular build of MicroPython on a particular system. The
 best place to find general information of the availability/non-availability
 of a particular feature is the "General Information" section which contains
-information pertaining to a specific :term:`MicroPython port`.
+information pertaining to a specific `MicroPython port`.
 
 On some ports you are able to discover the available, built-in libraries that
 can be imported by entering the following at the REPL::
@@ -125,6 +125,9 @@ Libraries specific to the Technic Hub
 
 The following libraries are specific to the Technic Hub and are built into its Micropython.
 
+.. toctree::
+  :maxdepth: 2
+
   hub.rst
   firmware.rst
   urandom.rst
@@ -132,6 +135,9 @@ The following libraries are specific to the Technic Hub and are built into its M
   _onewire.rst
 
 The following libraries are specific to the Technic Hub and are found in its filesystem.
+
+.. toctree::
+  :maxdepth: 2
 
   _api.rst
   commands.rst

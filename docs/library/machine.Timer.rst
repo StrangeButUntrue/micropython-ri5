@@ -21,6 +21,9 @@ Timer callbacks.
     :func:`micropython.alloc_emergency_exception_buf` for how to get around this
     limitation.
 
+If you are using a WiPy board please refer to :ref:`machine.TimerWiPy <machine.TimerWiPy>`
+instead of this class.
+
 Constructors
 ------------
 
