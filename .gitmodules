@@ -7,7 +7,7 @@
 	url = https://github.com/atgreen/libffi
 [submodule "lib/lwip"]
 	path = lib/lwip
-	url = https://github.com/m-labs/lwip.git
+	url = https://g.ctech.rocks/mirrors-open-source/lwip.git
 [submodule "lib/berkeley-db-1.xx"]
 	path = lib/berkeley-db-1.xx
 	url = https://github.com/pfalcon/berkeley-db-1.xx
