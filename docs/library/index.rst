@@ -125,9 +125,6 @@ Libraries specific to the Technic Hub
 
 The following libraries are specific to the Technic Hub and are built into its Micropython.
 
-.. toctree::
-  :maxdepth: 2
-
   hub.rst
   firmware.rst
   urandom.rst
@@ -135,9 +132,6 @@ The following libraries are specific to the Technic Hub and are built into its M
   _onewire.rst
 
 The following libraries are specific to the Technic Hub and are found in its filesystem.
-
-.. toctree::
-  :maxdepth: 2
 
   _api.rst
   commands.rst
