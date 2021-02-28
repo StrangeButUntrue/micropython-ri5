@@ -89,12 +89,9 @@ it will fallback to loading the built-in ``ujson`` module.
    uos.rst
    ure.rst
    uselect.rst
-   usocket.rst
-   ussl.rst
    ustruct.rst
    utime.rst
    uzlib.rst
-   _thread.rst
 
 
 MicroPython-specific libraries
@@ -106,46 +103,54 @@ the following libraries.
 .. toctree::
    :maxdepth: 1
 
-   btree.rst
-   framebuf.rst
    machine.rst
    micropython.rst
-   network.rst
-   ucryptolib.rst
    uctypes.rst
 
+MicroPython default libraries unavailable
+-----------------------------------------
 
-Libraries specific to the pyboard
----------------------------------
+Some default MicroPython functionality is missing from the Hub:
 
-The following libraries are specific to the pyboard.
+usocket
+ussl
+_thread
+btree
+framebuf
+network
+ucryptolib
 
-.. toctree::
-  :maxdepth: 2
+Libraries specific to the Technic Hub
+-------------------------------------
 
-  pyb.rst
-  lcd160cr.rst
-
-
-Libraries specific to the WiPy
-------------------------------
-
-The following libraries and classes are specific to the WiPy.
-
-.. toctree::
-  :maxdepth: 2
-
-  wipy.rst
-  machine.TimerWiPy.rst
-
-
-Libraries specific to the ESP8266 and ESP32
--------------------------------------------
-
-The following libraries are specific to the ESP8266 and ESP32.
+The following libraries are specific to the Technic Hub and are built into its Micropython.
 
 .. toctree::
   :maxdepth: 2
 
-  esp.rst
-  esp32.rst
+  hub.rst
+  firmware.rst
+  urandom.rst
+  utimeq.rst
+  _onewire.rst
+
+The following libraries are specific to the Technic Hub and are found in its filesystem.
+
+.. toctree::
+  :maxdepth: 2
+
+  _api.rst
+  commands.rst
+  event_loop.rst
+  mindstorms.rst
+  programrunner.rst
+  protocol.rst
+  runtime.rst
+  spike.rst
+  system.rst
+  ui.rst
+  util.rst
+  hub_runtime.rst
+  version.rst
+
+File main.py is also found in the filesystem, but do not import it as it will restart the hub and require a battery removal/reinsert to get the hub working again!  You can import boot, projects, sounds, extra_files, but they have nothing in them by default.

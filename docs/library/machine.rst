@@ -167,4 +167,8 @@ Classes
    machine.RTC.rst
    machine.Timer.rst
    machine.WDT.rst
-   machine.SD.rst
+
+
+Classes from default Micropython not present on the Hub
+-------------------------------------------------------
+class SD - secure digital memory card
