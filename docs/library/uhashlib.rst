@@ -7,22 +7,10 @@
 |see_cpython_module| :mod:`python:hashlib`.
 
 This module implements binary data hashing algorithms. The exact inventory
-of available algorithms depends on a board. Among the algorithms which may
-be implemented:
+of available algorithms depends on a board. RI5 implements:
 
 * SHA256 - The current generation, modern hashing algorithm (of SHA2 series).
-  It is suitable for cryptographically-secure purposes. Included in the
-  MicroPython core and any board is recommended to provide this, unless
-  it has particular code size constraints.
-
-* SHA1 - A previous generation algorithm. Not recommended for new usages,
-  but SHA1 is a part of number of Internet standards and existing
-  applications, so boards targeting network connectivity and
-  interoperatiability will try to provide this.
-
-* MD5 - A legacy algorithm, not considered cryptographically secure. Only
-  selected boards, targeting interoperatibility with legacy applications,
-  will offer this.
+  It is suitable for cryptographically-secure purposes.
 
 Constructors
 ------------
@@ -31,13 +19,12 @@ Constructors
 
     Create an SHA256 hasher object and optionally feed ``data`` into it.
 
-.. class:: uhashlib.sha1([data])
+.. admonition:: Difference for RI5
+   :class: attention
 
-    Create an SHA1 hasher object and optionally feed ``data`` into it.
+   Classes sha1 and md5 from the base MicroPython version are not implemented
+   on the RI5.
 
-.. class:: uhashlib.md5([data])
-
-    Create an MD5 hasher object and optionally feed ``data`` into it.
 
 Methods
 -------

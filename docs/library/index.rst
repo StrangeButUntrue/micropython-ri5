@@ -104,13 +104,19 @@ MicroPython default libraries unavailable
 
 Some default MicroPython functionality is missing from the Hub:
 
-usocket
-ussl
-_thread
-btree
-framebuf
-network
-ucryptolib
+* usocket
+
+* ussl
+
+* _thread
+
+* btree
+
+* framebuf
+
+* network
+
+* ucryptolib
 
 Libraries specific to the Technic Hub
 -------------------------------------

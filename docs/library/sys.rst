@@ -36,10 +36,12 @@ Constants
 .. data:: argv
 
    A mutable list of arguments the current program was started with.
+   Generally none for RI5 programs run normally.
 
 .. data:: byteorder
 
    The byte order of the system (``"little"`` or ``"big"``).
+   Is little on the RI5
 
 .. data:: implementation
 
@@ -47,7 +49,8 @@ Constants
    MicroPython, it has following attributes:
 
    * *name* - string "micropython"
-   * *version* - tuple (major, minor, micro), e.g. (1, 7, 0)
+   * *version* - tuple (major, minor, micro), e.g. (1, 11, 0)
+   * *mpy* - number e.g. 517
 
    This object is the recommended way to distinguish MicroPython from other
    Python implementations (note that it still may not exist in the very
@@ -65,6 +68,8 @@ Constants
    or maximum value representable by MicroPython integer type, if it's smaller
    than platform max value (that is the case for MicroPython ports without
    long int support).
+
+   On RI5, it's 2147483647 (=0x7FFFFFFF).
 
    This attribute is useful for detecting "bitness" of a platform (32-bit vs
    64-bit, etc.). It's recommended to not compare this attribute to some
@@ -93,6 +98,8 @@ Constants
 
    A mutable list of directories to search for imported modules.
 
+   On RI5, by default it's ['', '/flash', '/flash/lib']
+
 .. data:: platform
 
    The platform that MicroPython is running on. For OS/RTOS ports, this is
@@ -101,6 +108,8 @@ Constants
    reference board. It thus can be used to distinguish one board from another.
    If you need to check whether your program runs on MicroPython (vs other
    Python implementation), use `sys.implementation` instead.
+
+   On RI5 it's "LEGO Learning System Hub".
 
 .. data:: stderr
 

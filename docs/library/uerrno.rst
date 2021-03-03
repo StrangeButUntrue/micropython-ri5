@@ -25,6 +25,50 @@ Constants
             if exc.args[0] == uerrno.EEXIST:
                 print("Directory already exists")
 
+.. data:: EPERM = 1
+
+.. data:: ENOENT = 2
+
+.. data:: EIO = 5
+
+.. data:: EBADF = 9
+
+.. data:: EAGAIN = 11
+
+.. data:: ENOMEM = 12
+
+.. data:: EACCES = 13
+
+.. data:: EEXIST = 17
+
+.. data:: ENODEV = 19
+
+.. data:: EISDIR = 21
+
+.. data:: EINVAL = 22
+
+.. data:: EOPNOTSUPP = 95
+
+.. data:: EADDRINUSE = 98
+
+.. data:: ECONNABORTED = 103
+
+.. data:: ECONNRESET = 104
+
+.. data:: ENOBUFS = 105
+
+.. data:: ENOTCONN = 107
+
+.. data:: ETIMEDOUT = 110
+
+.. data:: ECONNREFUSED = 111
+
+.. data:: EHOSTUNREACH = 113
+
+.. data:: EALREADY = 114
+
+.. data:: EINPROGRESS = 115
+
 .. data:: errorcode
 
     Dictionary mapping numeric error codes to strings with symbolic error
