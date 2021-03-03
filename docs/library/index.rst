@@ -10,9 +10,8 @@ MicroPython libraries
    * MicroPython implements a subset of Python functionality for each module.
    * To ease extensibility, MicroPython versions of standard Python modules
      usually have ``u`` ("micro") prefix.
-   * Any particular MicroPython variant or port may miss any feature/function
-     described in this general documentation (due to resource constraints or
-     other limitations).
+   * Additions/deletions/modifications from the base Micropython version are
+     indicated within the document.
 
 
 This chapter describes modules (function and class libraries) which are built
@@ -23,7 +22,7 @@ into MicroPython. There are a few categories of such modules:
 * Modules which implement a subset of Python functionality, with a provision
   for extension by the user (via Python code).
 * Modules which implement MicroPython extensions to the Python standard libraries.
-* Modules specific to a particular `MicroPython port` and thus not portable.
+* Modules specific to this particular `MicroPython port` and thus not portable.
 
 Note about the availability of the modules and their contents: This documentation
 in general aspires to describe all modules and functions/classes which are
@@ -33,15 +32,8 @@ of MicroPython libraries. For officially supported ports, there is an effort
 to either filter out non-applicable items, or mark individual descriptions
 with "Availability:" clauses describing which ports provide a given feature.
 
-With that in mind, please still be warned that some functions/classes
-in a module (or even the entire module) described in this documentation **may be
-unavailable** in a particular build of MicroPython on a particular system. The
-best place to find general information of the availability/non-availability
-of a particular feature is the "General Information" section which contains
-information pertaining to a specific `MicroPython port`.
-
-On some ports you are able to discover the available, built-in libraries that
-can be imported by entering the following at the REPL::
+You are able to discover the available, built-in libraries that can be
+imported by entering the following at the REPL::
 
     help('modules')
 
@@ -62,7 +54,7 @@ By naming them differently, a user has a choice to write a Python-level module
 to extend functionality for better compatibility with CPython (indeed, this is
 what done by the `micropython-lib` project mentioned above).
 
-On some embedded platforms, where it may be cumbersome to add Python-level
+In the RI5 port, since it may be cumbersome to add Python-level
 wrapper modules to achieve naming compatibility with CPython, micro-modules
 are available both by their u-name, and also by their non-u-name.  The
 non-u-name can be overridden by a file of that name in your library path (``sys.path``).
@@ -153,4 +145,7 @@ The following libraries are specific to the Technic Hub and are found in its fil
   hub_runtime.rst
   version.rst
 
-File main.py is also found in the filesystem, but do not import it as it will restart the hub and require a battery removal/reinsert to get the hub working again!  You can import boot, projects, sounds, extra_files, but they have nothing in them by default.
+File main.py is also found in the filesystem, but do not import it as it will
+restart the hub and require a battery removal/reinsert to get the hub working
+again!  You can import boot, projects, sounds, extra_files, but they have nothing
+in them by default.

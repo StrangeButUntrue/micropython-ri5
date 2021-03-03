@@ -3,9 +3,13 @@
 Inline Assembler for Thumb2 architectures
 =========================================
 
+(The Technic Hub uses an ARM Cortex-M4 processor which uses Thumb2 instructions, so this section of the
+Micropython docs has been left in, but it's left as an exercise for the reader how to actually get started
+doing assembler programming on the Hub!)
+
 This document assumes some familiarity with assembly language programming and should be read after studying
-the :ref:`tutorial <pyboard_tutorial_assembler>`. For a detailed description of the instruction set consult the
-Architecture Reference Manual detailed below.
+a Thumb2 tutorial like the Pyboard Assembler Tutorial in the main Micropython docs. For a detailed description
+of the instruction set consult the Architecture Reference Manual detailed below.
 The inline assembler supports a subset of the ARM Thumb-2 instruction set described here. The syntax tries
 to be as close as possible to that defined in the above ARM manual, converted to Python function calls.
 
