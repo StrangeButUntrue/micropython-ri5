@@ -33,4 +33,7 @@ Classes
         Outputs a string of the decoded array.  Seems to treat each element
         as a byte and use ASCII encoding only?
 
-        |new_ri5|
+        .. admonition:: Difference for RI5
+           :class: attention
+
+           This function is an extension from the base MicroPython version.

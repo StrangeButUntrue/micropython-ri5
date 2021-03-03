@@ -194,13 +194,19 @@ Functions
    to IEEE rules. Specifically, NaN is not considered close to any other value,
    including NaN. inf and -inf are only considered close to themselves.
 
-   |new_ri5|
+   .. admonition:: Difference for RI5
+      :class: attention
+
+      This function is an extension from the base MicroPython version.
 
 .. function:: factorial(x)
 
    Return x factorial. Raises ValueError if x is not integral or is negative.
 
-   |new_ri5|
+   .. admonition:: Difference for RI5
+      :class: attention
+
+      This function is an extension from the base MicroPython version.
 
 Constants
 ---------

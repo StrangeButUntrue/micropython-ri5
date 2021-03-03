@@ -69,4 +69,7 @@ Functions
 
    Returns true if automatic collection is enabled.
 
-   |new_ri5|
+   .. admonition:: Difference for RI5
+      :class: attention
+
+      This function is an extension from the base MicroPython version.
