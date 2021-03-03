@@ -11,7 +11,7 @@ Functions
 
 .. function:: enable()
 
-   Enable automatic garbage collection.
+   Enable automatic garbage collection.  This is on by default for RI5 programs.
 
 .. function:: disable()
 
@@ -64,3 +64,9 @@ Functions
       This function is a MicroPython extension. CPython has a similar
       function - ``set_threshold()``, but due to different GC
       implementations, its signature and semantics are different.
+
+.. function:: isenabled()
+
+   Returns true if automatic collection is enabled.
+
+   |new_ri5|

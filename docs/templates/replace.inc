@@ -8,4 +8,9 @@
     as described below. For more information, refer to the original
     CPython documentation:*
 
-.. |new_ri5| replace:: *New in the RI5 Micropython*
+.. |new_ri5| replace::
+
+   .. admonition:: Difference for RI5
+      :class: attention
+
+      This function is an extension from the base MicroPython version.

@@ -30,7 +30,7 @@ Classes
 
     .. method:: decode()
 
-        |new_ri5|
-
         Outputs a string of the decoded array.  Seems to treat each element
         as a byte and use ASCII encoding only?
+
+        |new_ri5|
