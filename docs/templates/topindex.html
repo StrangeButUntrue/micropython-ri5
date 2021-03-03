@@ -2,19 +2,19 @@
 {% set title = _('Overview') %}
 {% block body %}
 
-  <h1>MicroPython documentation</h1>
+  <h1>MicroPython Lego RI5 documentation</h1>
 
   <p>
-    {{ _('Welcome! This is the documentation for MicroPython') }}
-    v{{ release|e }}{% if last_updated %}, {{ _('last updated') }} {{ last_updated|e }}{% endif %}.
+    {{ _('Welcome! This is the documentation for the Lego Spike Prime/RI5 Hub's MicroPython') }}
+    a fork of v{{ release|e }}.{% if last_updated %}  {{ _('It was last updated') }} {{ last_updated|e }}{% endif %}.
   </p>
 
   <p>
-    MicroPython runs on a variety of systems and hardware platforms.  Here you can read
-    the general documentation which applies to all systems, as well as specific information
-    about the various platforms -
-    also known as <a href="{{ pathto("reference/glossary") }}#term-micropython-port">ports</a>
-    - that MicroPython runs on.
+    This is a fork of the Micropython documentation to document the particular details of
+    the language as it exists in the Hub firmware.  (Version {{ hub_version|e }})  Here you can read
+    the general Micropython documentation which applies to all systems, as well as specific information
+    about the particular <a href="{{ pathto("reference/glossary") }}#term-micropython-port">ports</a>
+    for the Technic Hub.
   </p>
 
   <p><strong>General documentation for MicroPython:</strong></p>
@@ -83,7 +83,11 @@
     <td width="40%" style="padding-left:2em;">
       <p class="biglink">
         <a class="biglink" href="https://github.com/micropython">MicroPython on GitHub</a><br/>
-        <span class="linkdescr">contribute to the source code on GitHub</span>
+        <span class="linkdescr">contribute to the main Micropython source code on GitHub</span>
+      </p>
+      <p class="biglink">
+        <a class="biglink" href="https://github.com/StrangeButUntrue/micropython-ri5">MicroPython on GitHub</a><br/>
+        <span class="linkdescr">contribute to documenting the Micropython RI5 port on GitHub</span>
       </p>
     </td>
   </tr></table>

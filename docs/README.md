@@ -1,11 +1,18 @@
-MicroPython Documentation
-=========================
+MicroPython RI5 Documentation
+=============================
 
-The MicroPython documentation can be found at:
+These docs don't necessarily relate to the Micropython code in the main code
+tree.  They attempt to document the version of Python available on the Technic
+RI5/Spike Prime Hub.
+
+These docs are built at:
+https://micropython-lego-ri5.readthedocs.io/en/latest/
+
+The documentation you can see there is generated from the files in this docs
+tree - it should be rebuilt automatically on pushes to the repository.
+
+The default MicroPython documentation can be found at:
 http://docs.micropython.org/en/latest/
-
-The documentation you see there is generated from the files in the docs tree:
-https://github.com/micropython/micropython/tree/master/docs
 
 Building the documentation locally
 ----------------------------------

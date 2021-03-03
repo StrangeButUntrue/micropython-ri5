@@ -1,7 +1,22 @@
-[![Build Status](https://travis-ci.org/micropython/micropython.png?branch=master)](https://travis-ci.org/micropython/micropython) [![Coverage Status](https://coveralls.io/repos/micropython/micropython/badge.png?branch=master)](https://coveralls.io/r/micropython/micropython?branch=master)
+The MicroPython RI5 Project
+===========================
+
+Most of this repository is just an identical fork of the Micropython Project.
+However, the docs directory contains documentation of some of the changes that
+have been made by Lego when they used Micropython in the RI5 Hub (also known
+as Spike Prime).
+
+This is not an official Lego site, and any observations here are purely based
+on observations of running Python commands on the Hub, without any knowledge
+of the underlying source code.
+
+Original Micropython README follows...
+
 
 The MicroPython project
 =======================
+[![Build Status](https://travis-ci.org/micropython/micropython.png?branch=master)](https://travis-ci.org/micropython/micropython) [![Coverage Status](https://coveralls.io/repos/micropython/micropython/badge.png?branch=master)](https://coveralls.io/r/micropython/micropython?branch=master)
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/micropython/micropython/master/logo/upython-with-micro.jpg" alt="MicroPython Logo"/>
 </p>
