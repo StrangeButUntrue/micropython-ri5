@@ -36,3 +36,5 @@ Functions
 
       This class is MicroPython extension. It's included on provisional
       basis and may be changed considerably or removed in later versions.
+
+      Current methods of the stream are ``read()``, ``readinto()`` and ``readline()``.

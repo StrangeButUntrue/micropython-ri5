@@ -85,6 +85,10 @@ Functions
 
 Classes
 -------
+.. class:: IOBase(...)
+
+    (Python abstract base class for IO objects still technically exists, although isinstance
+    doesn't think the ones below are instances of it.)
 
 .. class:: FileIO(...)
 
@@ -105,8 +109,8 @@ Classes
     opened with "b" modifier). Initial contents of file-like objects
     can be specified with *string* parameter (should be normal string
     for `StringIO` or bytes object for `BytesIO`). All the usual file
-    methods like ``read()``, ``write()``, ``seek()``, ``flush()``,
-    ``close()`` are available on these objects, and additionally, a
+    methods (``read()``, ``readinto()``, ``readline()``, ``write()``,
+    ``seek()``, ``flush()``, ``close()``) are available on these objects, and additionally, a
     following method:
 
     .. method:: getvalue()

@@ -140,10 +140,10 @@ Functions
 
    Note: availability of this function depends on `MicroPython port`.
 
-.. data:: DEBUG
+.. admonition:: Difference for RI5
+   :class: attention
 
-   Flag value, display debug information about compiled expression.
-   (Availability depends on `MicroPython port`.)
+   The base MicroPython version has a ure.DEBUG flag value that the RI5 doesn't have.
 
 
 .. _regex:
@@ -180,23 +180,9 @@ to the replacement function in `sub()`.
    Return matching (sub)string. *index* is 0 for entire match,
    1 and above for each capturing group. Only numeric groups are supported.
 
-.. method:: match.groups()
+.. admonition:: Difference for RI5
+   :class: attention
 
-   Return a tuple containing all the substrings of the groups of the match.
+   The base MicroPython version has various methods that the RI5 doesn't:
+   match.groups(), match.start(), match.end(), match.span()
 
-   Note: availability of this method depends on `MicroPython port`.
-
-.. method:: match.start([index])
-            match.end([index])
-
-   Return the index in the original string of the start or end of the
-   substring group that was matched.  *index* defaults to the entire
-   group, otherwise it will select a group.
-
-   Note: availability of these methods depends on `MicroPython port`.
-
-.. method:: match.span([index])
-
-   Returns the 2-tuple ``(match.start(index), match.end(index))``.
-
-   Note: availability of this method depends on `MicroPython port`.
