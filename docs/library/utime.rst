@@ -9,29 +9,31 @@
 The ``utime`` module provides functions for getting the current time and date,
 measuring time intervals, and for delays.
 
-**Time Epoch**: Unix port uses standard for POSIX systems epoch of
-1970-01-01 00:00:00 UTC. However, embedded ports use epoch of
+**Time Epoch**: In contrast to Unix (and the Unix port of Micropython) using
+1970-01-01 00:00:00 UTC, embedded ports including the RI5 use epoch of
 2000-01-01 00:00:00 UTC.
 
 **Maintaining actual calendar date/time**: This requires a
 Real Time Clock (RTC). On systems with underlying OS (including some
 RTOS), an RTC may be implicit. Setting and maintaining actual calendar
 time is responsibility of OS/RTOS and is done outside of MicroPython,
-it just uses OS API to query date/time. On baremetal ports however
+it just uses OS API to query date/time. On baremetal ports like the RI5 however
 system time depends on ``machine.RTC()`` object. The current calendar time
-may be set using ``machine.RTC().datetime(tuple)`` function, and maintained
-by following means:
+may be set using ``machine.RTC().datetime(tuple)`` function.
 
-* By a backup battery (which may be an additional, optional component for
-  a particular board).
-* Using networked time protocol (requires setup by a port/user).
-* Set manually by a user on each power-up (many boards then maintain
-  RTC time across hard resets, though some may require setting it again
-  in such case).
+On the RI5, the RTC seems to keep running while the Hub is either switched on
+or plugged into a USB power source.  When not powered in this way it resets to
+the value 473385600 seconds, or 2015-01-01 00:00:00 UTC.  Also interesting is
+that after a reset, the RTC only seems to start counting when it is first
+used to get the time since Epoch.  (Use of the sleep/ticks functions don't
+count, but ``machine.RTC()`` functions ``datetime()``, ``wakeup()`` and
+``calibration()`` do start it going.)
 
-If actual calendar time is not maintained with a system/MicroPython RTC,
-functions below which require reference to current absolute time may
-behave not as expected.
+The RI5 doesn't keep very exact time since its RTC is just based on CPU
+clock-cycles.  The ``machine.RTC().calibration()`` function can be used to
+better approximate real time, but note that this may require tuning for a
+particular system, and the functions below should probably not be relied upon
+for exact timekeeping without access to an external time source.
 
 Functions
 ---------
@@ -51,6 +53,10 @@ Functions
    * weekday is 0-6 for Mon-Sun
    * yearday is 1-366
 
+   Note that the RTC time can be successfully set to certain invalid values -
+   I haven't experimented in detail with the behaviour of the RTC or this
+   function after such events.
+
 .. function:: mktime()
 
    This is inverse function of localtime. It's argument is a full 8-tuple
@@ -59,10 +65,8 @@ Functions
 
 .. function:: sleep(seconds)
 
-   Sleep for the given number of seconds. Some boards may accept *seconds* as a
-   floating-point number to sleep for a fractional number of seconds. Note that
-   other boards may not accept a floating-point argument, for compatibility with
-   them use `sleep_ms()` and `sleep_us()` functions.
+   Sleep for the given number of seconds. *seconds* may be a floating-point
+   number to sleep for a fractional number of seconds.
 
 .. function:: sleep_ms(ms)
 
@@ -80,7 +84,8 @@ Functions
     The wrap-around value is not explicitly exposed, but we will
     refer to it as *TICKS_MAX* to simplify discussion. Period of the values is
     *TICKS_PERIOD = TICKS_MAX + 1*. *TICKS_PERIOD* is guaranteed to be a power of
-    two, but otherwise may differ from port to port. The same period value is used
+    two, but otherwise may differ from port to port. On the RI5 it is 0x40000000.
+    The same period value is used
     for all of `ticks_ms()`, `ticks_us()`, `ticks_cpu()` functions (for
     simplicity). Thus, these functions will return a value in range [*0* ..
     *TICKS_MAX*], inclusive, total *TICKS_PERIOD* values. Note that only
@@ -101,16 +106,8 @@ Functions
 .. function:: ticks_cpu()
 
    Similar to `ticks_ms()` and `ticks_us()`, but with the highest possible resolution
-   in the system. This is usually CPU clocks, and that's why the function is named that
-   way. But it doesn't have to be a CPU clock, some other timing source available in a
-   system (e.g. high-resolution timer) can be used instead. The exact timing unit
-   (resolution) of this function is not specified on ``utime`` module level, but
-   documentation for a specific port may provide more specific information. This
+   in the system: for RI5 this is the CPU clock at 100MHz.  This
    function is intended for very fine benchmarking or very tight real-time loops.
-   Avoid using it in portable code.
-
-   Availability: Not every port implements this function.
-
 
 .. function:: ticks_add(ticks, delta)
 
@@ -206,9 +203,7 @@ Functions
 .. function:: time()
 
    Returns the number of seconds, as an integer, since the Epoch, assuming that
-   underlying RTC is set and maintained as described above. If an RTC is not set, this
-   function returns number of seconds since a port-specific reference point in time (for
-   embedded boards without a battery-backed RTC, usually since power up or reset). If you
+   underlying RTC is set and maintained as described above.  If you
    want to develop portable MicroPython application, you should not rely on this function
    to provide higher than second precision. If you need higher precision, use
    `ticks_ms()` and `ticks_us()` functions, if you need calendar time,
