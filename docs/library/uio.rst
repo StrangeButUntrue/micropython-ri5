@@ -77,11 +77,9 @@ to implement, or subclass, a stream class in pure Python.
 Functions
 ---------
 
-.. function:: open(name, mode='r', **kwargs)
+.. function:: open(name, mode='r', buffering=-1, encoding=None)
 
     Open a file. Builtin ``open()`` function is aliased to this function.
-    All ports (which provide access to file system) are required to support
-    *mode* parameter, but support for other arguments vary by port.
 
 Classes
 -------
@@ -108,8 +106,8 @@ Classes
     `BytesIO` is used for binary-mode I/O (similar to a normal file
     opened with "b" modifier). Initial contents of file-like objects
     can be specified with *string* parameter (should be normal string
-    for `StringIO` or bytes object for `BytesIO`). All the usual file
-    methods (``read()``, ``readinto()``, ``readline()``, ``write()``,
+    for `StringIO` or bytes object for `BytesIO`). All the basic file
+    methods (``read()``, ``readinto()``, ``readline()``, ``readlines()``, ``write()``,
     ``seek()``, ``flush()``, ``close()``) are available on these objects, and additionally, a
     following method:
 
