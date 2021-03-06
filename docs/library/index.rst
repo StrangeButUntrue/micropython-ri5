@@ -91,8 +91,6 @@ These libraries do exist in MicroPython, but aren't in the base docs.
    :maxdepth: 1
 
    urandom.rst
-   utimeq.rst
-   _onewire.rst
 
 MicroPython-specific libraries
 ------------------------------
@@ -106,6 +104,14 @@ the following libraries.
    machine.rst
    micropython.rst
    uctypes.rst
+
+These libraries do exist in MicroPython, but aren't in the base docs.
+
+.. toctree::
+   :maxdepth: 1
+
+   utimeq.rst
+   _onewire.rst
 
 MicroPython default libraries unavailable
 -----------------------------------------

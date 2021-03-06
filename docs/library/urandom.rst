@@ -4,14 +4,14 @@
 .. module:: urandom
    :synopsis: random number generation
 
-|see_cpython_module| :mod:`python:random
+|see_cpython_module| :mod:`python:random`
 
 .. admonition:: Difference to CPython
    :class: attention
 
-   The pseudorandom algorithm used in Micropython is the Yasmarang algorithm
-   (<http://www.literatecode.com/yasmarang>), instead of the Mersenne Twister
-   used in CPython.
+   The pseudorandom algorithm used in Micropython is the
+   `Yasmarang algorithm <http://www.literatecode.com/yasmarang>`_ , instead of
+   the Mersenne Twister used in CPython.
 
 This module allows generation of pseudo-random numbers, including setting of a
 seed.  (These are probably not suitable for cryptographic purposes.)

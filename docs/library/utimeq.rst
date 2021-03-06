@@ -35,11 +35,11 @@ Classes
       Push an entry onto the heap queue.
 
       * The `time` parameter should be a number of ticks (see the utime module)
-      compatible with ``utime.ticks_diff()``.
+        compatible with ``utime.ticks_diff()``.
 
       * The `obj` and `userdata` parameters are not used internally, so the user
-      can set them to anything.  (The underlying MicroPython code suggests a
-      callback and its arguments.)
+        can set them to anything.  (The underlying MicroPython code suggests a
+        callback and its arguments.)
 
    .. method:: pop(list)
 
