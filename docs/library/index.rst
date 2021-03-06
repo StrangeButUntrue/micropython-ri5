@@ -85,6 +85,14 @@ it will fallback to loading the built-in ``ujson`` module.
    utime.rst
    uzlib.rst
 
+These libraries do exist in MicroPython, but aren't in the base docs.
+
+.. toctree::
+   :maxdepth: 1
+
+   urandom.rst
+   utimeq.rst
+   _onewire.rst
 
 MicroPython-specific libraries
 ------------------------------
@@ -118,6 +126,18 @@ Some default MicroPython functionality is missing from the Hub:
 
 * ucryptolib
 
+And some undocumented MicroPython modules that aren't in RI5:
+
+* bluetooth
+
+* lwip
+
+* uasyncio (but note that the RI5 does have the async keyword)
+
+* uwebsocket
+
+* webrepl
+
 Libraries specific to the Technic Hub
 -------------------------------------
 
@@ -128,9 +148,6 @@ The following libraries are specific to the Technic Hub and are built into its M
 
   hub.rst
   firmware.rst
-  urandom.rst
-  utimeq.rst
-  _onewire.rst
 
 The following libraries are specific to the Technic Hub and are found in its filesystem.
 
@@ -153,5 +170,5 @@ The following libraries are specific to the Technic Hub and are found in its fil
 
 File main.py is also found in the filesystem, but do not import it as it will
 restart the hub and require a battery removal/reinsert to get the hub working
-again!  You can import boot, projects, sounds, extra_files, but they have nothing
-in them by default.
+again!  You can technically "import" boot, projects, sounds, extra_files, but
+by default they're empty of Python content so they do nothing.
