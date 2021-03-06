@@ -80,6 +80,13 @@ Functions
    used.  The absolute value of this is not particularly useful, rather it
    should be used to compute differences in stack usage at different points.
 
+.. function:: pystack_use()
+
+   An undocumented base-Micropython function.  Return an integer presumably
+   representing the current amount of stack being used by the "Pystack".  I'm
+   not sure whether that's a subset of the other stack or separate though!  Or
+   what the difference is...
+
 .. function:: heap_lock()
 .. function:: heap_unlock()
 

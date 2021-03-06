@@ -255,6 +255,19 @@ Module contents
    constant for structures, it's implicit: an aggregate type without ``PTR``
    or ``ARRAY`` flags is a structure.
 
+.. data:: BFUINT8
+          BFINT8
+          BFUINT16
+          BFINT16
+          BFUINT32
+          BFINT32
+          BFUINT64
+          BFINT64
+          BF_POS
+          BF_LEN
+
+   Types for bitfield operation - see above.
+
 Structure descriptors and instantiating structure objects
 ---------------------------------------------------------
 
