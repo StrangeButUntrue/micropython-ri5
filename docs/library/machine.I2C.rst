@@ -17,8 +17,7 @@ Example usage::
     from machine import I2C
 
     i2c = I2C(freq=400000)          # create I2C peripheral at frequency of 400kHz
-                                    # depending on the port, extra parameters may be required
-                                    # to select the peripheral and/or pins to use
+                                    # (in this port, actually scl and sda parameters also required)
 
     i2c.scan()                      # scan for slaves, returning a list of 7-bit addresses
 
@@ -33,7 +32,7 @@ Example usage::
 Constructors
 ------------
 
-.. class:: I2C(id=-1, \*, scl, sda, freq=400000)
+.. class:: I2C(id=-1, \*, scl, sda, freq=400000, timeout=?)
 
    Construct and return a new I2C object using the following parameters:
 
@@ -41,13 +40,27 @@ Constructors
         value of -1 selects a software implementation of I2C which can
         work (in most cases) with arbitrary pins for SCL and SDA.
         If *id* is -1 then *scl* and *sda* must be specified.  Other
-        allowed values for *id* depend on the particular port/board,
-        and specifying *scl* and *sda* may or may not be required or
-        allowed in this case.
-      - *scl* should be a pin object specifying the pin to use for SCL.
-      - *sda* should be a pin object specifying the pin to use for SDA.
+        allowed values for *id* on the RI5 are 1 and 3 (see below) - in these
+        cases specifying scl/sda is not allowed, and freq seems to be ignored.
+      - *scl* should be a pin object/string specifying the pin to use for SCL.
+      - *sda* should be a pin object/string specifying the pin to use for SDA.
       - *freq* should be an integer which sets the maximum frequency
         for SCL.
+      - the *timeout* parameter isn't documented in base MicroPython, so it's
+        not quite clear what it's meant to do or what the default is.
+
+   Printing I2C(1) or I2C(3) shows its pin/freq details, printing a custom
+   I2C shows nothing much.
+
+   Setting a custom I2C on the same pins as a pre-existing one is accepted,
+   but it does seem to modify behaviour of the pre-existing one.  (Though so
+   far that's meant just different error codes in my experiments - ETIMEDOUT
+   rather than ENODEV/EINVAL.)
+
+I2C ids on the RI5
+------------------
+- I2C(1, scl=B6, sda=B7, freq=480000)
+- I2C(3, scl=A8, sda=C9, freq=480000)
 
 General Methods
 ---------------
@@ -60,17 +73,22 @@ General Methods
      - *sda* is a pin object for the SDA line
      - *freq* is the SCL clock rate
 
-.. method:: I2C.deinit()
+  It's not clear whether user-defined I2Cs on RI5 can actually have parameters
+  successfully changed with this function.  Certainly attempting to use this
+  function on I2C(1) or I2C(3) causes system failure.
 
-   Turn off the I2C bus.
+.. admonition:: Difference for RI5
+   :class: attention
 
-   Availability: WiPy.
+   Function ``deinit()`` to turn off the bus is not available on RI5.
 
 .. method:: I2C.scan()
 
    Scan all I2C addresses between 0x08 and 0x77 inclusive and return a list of
    those that respond.  A device responds if it pulls the SDA line low after
    its address (including a write bit) is sent on the bus.
+
+   On RI5, scans of I2C(1) and I2C(3) seem to just return [].
 
 Primitive I2C operations
 ------------------------
@@ -79,7 +97,8 @@ The following methods implement the primitive I2C master bus operations and can
 be combined to make any I2C transaction.  They are provided if you need more
 control over the bus, otherwise the standard methods (see below) can be used.
 
-These methods are available on software I2C only.
+These methods are available on software I2C only.  They tend to throw an OSError
+of ETIMEDOUT if things aren't set up correctly to accept I2C commands.
 
 .. method:: I2C.start()
 
@@ -165,8 +184,7 @@ methods are convenience functions to communicate with such devices.
    Read into *buf* from the slave specified by *addr* starting from the
    memory address specified by *memaddr*.  The number of bytes read is the
    length of *buf*.
-   The argument *addrsize* specifies the address size in bits (on ESP8266
-   this argument is not recognised and the address size is always 8 bits).
+   The argument *addrsize* specifies the address size in bits.
 
    The method returns ``None``.
 
@@ -174,7 +192,6 @@ methods are convenience functions to communicate with such devices.
 
    Write *buf* to the slave specified by *addr* starting from the
    memory address specified by *memaddr*.
-   The argument *addrsize* specifies the address size in bits (on ESP8266
-   this argument is not recognised and the address size is always 8 bits).
+   The argument *addrsize* specifies the address size in bits.
 
    The method returns ``None``.

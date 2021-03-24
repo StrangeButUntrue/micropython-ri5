@@ -24,12 +24,12 @@ Constructors
    did receive data from somewhere...  The constants below seem to represent
    a few important ones though.
 
-.. class:: ADC(pin_name)
+.. class:: ADC(pin)
 
-   Create an ADC object from the Pin corresponding to string ``pin_name``.
+   Create an ADC object from the given Pin object/string.
 
-   On the RI5, this seems to be possible only on PA0, PB0, PB1, PC0-5
-   (although using it on PC2 or PC3 seems to conflict with something in the
+   On the RI5, this seems to be possible only on pins A0, B0, B1, C0-5
+   (although using it on C2 or C3 seems to conflict with something in the
    firmware, causing runtime errors after use).
 
 Methods
@@ -75,40 +75,40 @@ Experiments often showed slightly different initial values settling down to a
 more steady range of values.  I also found the sources for the rest of the
 channels below 16, apart from channel 1:
 
-PA0 for a while reported values from 0x1341 to 0x1501.  Printing the ADC showed
+A0 for a while reported values from 0x1341 to 0x1501.  Printing the ADC showed
 it's probably equal to channel 0 (i.e. ADC(0)).
 
-PA2 for a while reported values from 0x1001 to 0x1041.  It presents as channel 2.
+A2 for a while reported values from 0x1001 to 0x1041.  It presents as channel 2.
 
-PA3 for a while reported values from 0x11A1 to 0x12B1.  It presents as channel 3.
+A3 for a while reported values from 0x11A1 to 0x12B1.  It presents as channel 3.
 
-PA4 for a while reported values from 0x1041 to 0x1101.  It presents as channel 4.
+A4 for a while reported values from 0x1041 to 0x1101.  It presents as channel 4.
 
-PA5 for a while reported values from 0x1181 to 0x12A1.  It presents as channel 5.
+A5 for a while reported values from 0x1181 to 0x12A1.  It presents as channel 5.
 
-PA6 for a while reported values from 0x0FB0 to 0x1011.  It presents as channel 6.
+A6 for a while reported values from 0x0FB0 to 0x1011.  It presents as channel 6.
 
-PA7 for a while reported values from 0x1241 to 0x1391.  It presents as channel 7.
+A7 for a while reported values from 0x1241 to 0x1391.  It presents as channel 7.
 
-PB0 for a while reported values from 0x25C2 to 0x2672.  It presents as channel 8.
+B0 for a while reported values from 0x25C2 to 0x2672.  It presents as channel 8.
 
-PB1 for a while reported values from 0x11C1 to 0x1471.  It presents as channel 9.
+B1 for a while reported values from 0x11C1 to 0x1471.  It presents as channel 9.
 
-PC0 for a while reported values from 0x10F1 to 0x1221.  It presents as channel 10.
+C0 for a while reported values from 0x10F1 to 0x1221.  It presents as channel 10.
 
-PC1 for a while reported values from 0x3003 to 0x3173 and on another occasion
+C1 for a while reported values from 0x3003 to 0x3173 and on another occasion
 reported values from 0xB23B to 0xBA8B.  It presents as channel 11.
 
-PC2 for a while reported values from 0x1331 to 0x1EA1.  It presents as channel
+C2 for a while reported values from 0x1331 to 0x1EA1.  It presents as channel
 12.  Although if you access channel 12 directly you tend to get much lower
 values it seems, and no runtime errors...
 
-PC3 gave two much higher readings of 0xAFEA and 0x2152, then settled down into
+C3 gave two much higher readings of 0xAFEA and 0x2152, then settled down into
 lower readings between 0x1241 and 0x1551.  It presents as channel 13, but if
 you access channel 12 directly you tend to get much lower values it seems, and
 no runtime errors...
 
-PC4 for a while reported values from 0xA0AA to 0xCA9C.  It presents as channel 14.
+C4 for a while reported values from 0xA0AA to 0xCA9C.  It presents as channel 14.
 
-PC5 gave one much higher reading of 0x4E94, then for a while reported values
+C5 gave one much higher reading of 0x4E94, then for a while reported values
 from 0x0860 to 0x0AB0.  It presents as channel 15.
