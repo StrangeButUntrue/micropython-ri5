@@ -16,13 +16,14 @@ UART objects can be created and initialised using::
     uart = UART(1, 9600)                         # init with given baudrate
     uart.init(9600, bits=8, parity=None, stop=1) # init with given parameters
 
-Supported parameters differ on a board:
+Supported parameters differ on different boards.
 
-Pyboard: Bits can be 7, 8 or 9. Stop can be 1 or 2. With *parity=None*,
-only 8 and 9 bits are supported.  With parity enabled, only 7 and 8 bits
-are supported.
-
-WiPy/CC3200: Bits can be 5, 6, 7, 8. Stop can be 1 or 2.
+On the RI5, it appears that no UARTs are actually available - at least I
+couldn't find an ID that would allow me to create one.  So available
+parameters are unknown and the rest of this section is a little light on
+RI5-specific detail as it's difficult to do experiments when you can't create
+the base object!  It's based on the STM32 port code instead since that'll
+probably be quite similar...
 
 A UART object acts like a `stream` object and reading and writing is done
 using the standard stream methods::
@@ -38,7 +39,8 @@ Constructors
 
 .. class:: UART(id, ...)
 
-   Construct a UART object of the given id.
+   Construct a UART object of the given id.  Any additional parameters are
+   passed on to the init function.
 
 Methods
 -------
@@ -48,24 +50,13 @@ Methods
    Initialise the UART bus with the given parameters:
 
      - *baudrate* is the clock rate.
-     - *bits* is the number of bits per character, 7, 8 or 9.
+     - *bits* is the number of bits per character.  Can be 8 or 9.
      - *parity* is the parity, ``None``, 0 (even) or 1 (odd).
      - *stop* is the number of stop bits, 1 or 2.
-
-   Additional keyword-only parameters that may be supported by a port are:
-
-     - *tx* specifies the TX pin to use.
-     - *rx* specifies the RX pin to use.
-     - *txbuf* specifies the length in characters of the TX buffer.
-     - *rxbuf* specifies the length in characters of the RX buffer.
-
-   On the WiPy only the following keyword-only parameter is supported:
-
-     - *pins* is a 4 or 2 item list indicating the TX, RX, RTS and CTS pins (in that order).
-       Any of the pins can be None if one wants the UART to operate with limited functionality.
-       If the RTS pin is given the the RX pin must be given as well. The same applies to CTS.
-       When no pins are given, then the default set of TX and RX pins is taken, and hardware
-       flow control will be disabled. If *pins* is ``None``, no pin assignment will be made.
+     - `timeout` is the timeout in milliseconds to wait for the first character.
+     - `timeout_char` is the timeout in milliseconds to wait between characters.
+     - `flow` is RTS | CTS where RTS == 256, CTS == 512
+     - `read_buf_len` is the character length of the read buffer (0 to disable).
 
 .. method:: UART.deinit()
 
@@ -106,26 +97,33 @@ Methods
 
    Return value: the line read or ``None`` on timeout.
 
+.. method:: UART.readchar()
+
+   Receive a single character, and return it as an integer (or -1 on timeout).
+
 .. method:: UART.write(buf)
 
    Write the buffer of bytes to the bus.
 
    Return value: number of bytes written or ``None`` on timeout.
 
+.. method:: UART.writechar(char)
+
+   Write a single character to the bus.  ``char`` is the integer to write.
+   Returns ``None``.
+
 .. method:: UART.sendbreak()
 
    Send a break condition on the bus. This drives the bus low for a duration
    longer than required for a normal transmission of a character.
 
-.. method:: UART.irq(trigger, priority=1, handler=None, wake=machine.IDLE)
+.. method:: UART.irq(trigger=0, hard=False, handler=None)
 
    Create a callback to be triggered when data is received on the UART.
 
-       - *trigger* can only be ``UART.RX_ANY``
-       - *priority* level of the interrupt. Can take values in the range 1-7.
-         Higher values represent higher priorities.
+       - *trigger* can only be ``UART.IRQ_RXIDLE``
+       - *hard* seems to specify whether it's a hardware or software interrupt?
        - *handler* an optional function to be called when new characters arrive.
-       - *wake* can only be ``machine.IDLE``.
 
    .. note::
 
@@ -140,13 +138,17 @@ Methods
 
    Returns an irq object.
 
-   Availability: WiPy.
-
 Constants
 ---------
 
-.. data:: UART.RX_ANY
+.. data:: UART.RTS = 256
 
-    IRQ trigger sources
+    Flow parameter setting for initialization.
 
-    Availability: WiPy.
+.. data:: UART.CTS = 512
+
+    Flow parameter setting for initialization.
+
+.. data:: UART.IRQ_RXIDLE = 16
+
+    IRQ flag "idle".  (Replaces UART.RX_ANY from the base documentation.)
