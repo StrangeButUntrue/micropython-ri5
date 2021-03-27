@@ -53,10 +53,10 @@ Methods
      - *bits* is the number of bits per character.  Can be 8 or 9.
      - *parity* is the parity, ``None``, 0 (even) or 1 (odd).
      - *stop* is the number of stop bits, 1 or 2.
-     - `timeout` is the timeout in milliseconds to wait for the first character.
-     - `timeout_char` is the timeout in milliseconds to wait between characters.
-     - `flow` is RTS | CTS where RTS == 256, CTS == 512
-     - `read_buf_len` is the character length of the read buffer (0 to disable).
+     - *timeout* is the timeout in milliseconds to wait for the first character.
+     - *timeout_char* is the timeout in milliseconds to wait between characters.
+     - *flow* is RTS | CTS where RTS == 256, CTS == 512
+     - *read_buf_len* is the character length of the read buffer (0 to disable).
 
 .. method:: UART.deinit()
 
