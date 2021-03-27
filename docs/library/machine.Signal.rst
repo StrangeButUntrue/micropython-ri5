@@ -82,8 +82,7 @@ Constructors
    * By wrapping existing Pin object - universal method which works for
      any board.
    * By passing required Pin parameters directly to Signal constructor,
-     skipping the need to create intermediate Pin object. Available on
-     many, but not all boards.
+     skipping the need to create intermediate Pin object.
 
    The arguments are:
 

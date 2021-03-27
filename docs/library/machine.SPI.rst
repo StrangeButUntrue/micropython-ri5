@@ -72,9 +72,10 @@ Methods
        respectively.  (Although it can actually take any byte value.)
      - ``bits`` is the width in bits of each transfer. Must be 8.
      - ``firstbit`` must be ``SPI.MSB`` (0).
-     - ``sck``, ``mosi``, ``miso`` are pins (machine.Pin) objects to use for bus signals. For most
-       hardware SPI blocks (as selected by ``id`` parameter to the constructor), pins are fixed
-       and cannot be changed. In some cases, hardware blocks allow 2-3 alternative pin sets for
+     - ``sck``, ``mosi``, ``miso`` are pins (machine.Pin) objects (or strings
+       naming pins) to use for bus signals. For most hardware SPI blocks (as
+       selected by ``id`` parameter to the constructor), pins are fixed and
+       cannot be changed. In some cases, hardware blocks allow 2-3 alternative pin sets for
        a hardware SPI block. Arbitrary pin assignments are possible only for a bitbanging SPI driver
        (``id`` = -1).
 
@@ -124,4 +125,4 @@ Constants
 
 .. data:: SPI.LSB = 128
 
-   set the first bit to be the least significant bit
+   Set the first bit to be the least significant bit.  (Cannot be used on RI5.)
