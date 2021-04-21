@@ -69,8 +69,8 @@ General Methods
 
   Initialise the I2C bus with the given arguments:
 
-     - *scl* is a pin object for the SCL line
-     - *sda* is a pin object for the SDA line
+     - *scl* is a pin object or string name of a pin for the SCL line
+     - *sda* is a pin object or string name of a pin for the SDA line
      - *freq* is the SCL clock rate
 
   It's not clear whether user-defined I2Cs on RI5 can actually have parameters

@@ -26,7 +26,7 @@ Constructors
 
 .. class:: ADC(pin)
 
-   Create an ADC object from the given Pin object/string.
+   Create an ADC object from the given Pin object/pin name string.
 
    On the RI5, this seems to be possible only on pins A0, B0, B1, C0-5
    (although using it on C2 or C3 seems to conflict with something in the
