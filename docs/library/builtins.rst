@@ -142,6 +142,12 @@ Functions and types
 
 .. function:: print()
 
+   .. admonition:: Difference for RI5
+      :class: attention
+
+      On the RI5, this function has been overwritten by an alias to a new
+      builtin `spikeprint()`
+
 .. class:: property()
 
 .. function:: range()
@@ -161,6 +167,15 @@ Functions and types
    The *slice* builtin is the type that slice objects have.
 
 .. function:: sorted()
+
+.. function:: spikeprint()
+
+   .. admonition:: Difference for RI5
+      :class: attention
+
+      A new function that overwrites `print()`, presumably so that print
+      responses can be successfully sent back over the link to the controlling
+      app.
 
 .. function:: staticmethod()
 

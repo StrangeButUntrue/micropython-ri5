@@ -91,8 +91,8 @@ Constants
 
 .. data:: modules
 
-   Dictionary of loaded modules. On some ports, it may not include builtin
-   modules.
+   Dictionary of loaded modules. On RI5, this doesn't include Python-builtin
+   modules but does include modules loaded from the filesystem.
 
 .. data:: path
 
@@ -126,7 +126,9 @@ Constants
 .. data:: version
 
    Python language version that this implementation conforms to, as a string.
+   E.g. "3.4.0".
 
 .. data:: version_info
 
-   Python language version that this implementation conforms to, as a tuple of ints.
+   Python language version that this implementation conforms to, as a tuple of
+   ints.  E.g. (3, 4, 0)

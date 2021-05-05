@@ -147,6 +147,13 @@ And some undocumented MicroPython modules that aren't in RI5:
 Libraries specific to the Technic Hub
 -------------------------------------
 
+.. admonition:: Difference for RI5
+   :class: attention
+
+   The following libraries are not found in default MicroPython.  As such,
+   documentation is mainly based on experimentation and internet sources
+   since no code sources are available.
+
 The following libraries are specific to the Technic Hub and are built into its Micropython.
 
 .. toctree::

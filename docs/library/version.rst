@@ -1,5 +1,5 @@
-Version module
-==============
+:mod:`version` -- Version module
+================================
 
 Just contains the version!
 
