@@ -122,17 +122,6 @@ Constants
    Reference to the main error handler object (type
    :class:util.error_handler.ErrorHandler).
 
-Imports
--------
-
-* Module `util.sensors`
-* Module `sys`
-* Module `hub`
-* Module `gc`
-* Module `protocol.notifications`
-* Class `runtime.virtualmachine.VirtualMachine`
-* Function `micropython.const`
-
 Class ProgramRunner
 -------------------
 
@@ -186,3 +175,14 @@ Class ProgramRunner
       :value: 2
 
       ???
+
+Imports
+-------
+
+* Module `util.sensors`
+* Module `sys`
+* Module `hub`
+* Module `gc`
+* Module `protocol.notifications`
+* Class `runtime.virtualmachine.VirtualMachine`
+* Function `micropython.const`
