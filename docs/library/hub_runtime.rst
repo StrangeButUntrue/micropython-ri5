@@ -4,40 +4,77 @@
 Seems to be the main module on the Hub, in charge of startup and error
 handling.
 
-Raw module data
----------------
+Functions
+---------
 
-::
+.. function:: register_ports(???)
 
-    object <module 'hub_runtime' from 'hub_runtime.mpy'> is of type module
-      LinegraphMonitorMethods -- <class 'LinegraphMonitorMethods'>
-      SoundMethods -- <class 'SoundMethods'>
-      ProgramRunner -- <class 'ProgramRunner'>
-      register_ports -- <function register_ports at 0x200219a0>
-      BT_VCP -- BT_VCP(0)
-      HubUI -- <class 'HubUI'>
-      __connection_changed -- <function __connection_changed at 0x2002c8c0>
-      error_handler -- <ErrorHandler object at 2002c090>
-      init -- <function init at 0x2002c890>
-      TIMER_PACE_HIGH -- 16
-      __file__ -- hub_runtime.mpy
-      sensors -- <module 'util.sensors' from 'util/sensors.mpy'>
-      LightMethods -- <class 'LightMethods'>
-      start -- <function start at 0x2002c8b0>
-      ProgramMethods -- <class 'ProgramMethods'>
-      MotorMethods -- <class 'MotorMethods'>
-      pop_force_reset -- <function pop_force_reset at 0x20024e20>
-      USB_VCP -- USB_VCP(0)
-      __name__ -- hub_runtime
-      HubMethods -- <class 'HubMethods'>
-      RPCProtocol -- <class 'RPCProtocol'>
-      hub -- <module 'hub'>
-      system -- <System object at 20033150>
-      runtime -- <module 'runtime' from 'runtime/__init__.mpy'>
-      get_event_loop -- <function get_event_loop at 0x2001ca30>
-      notify_gesture_event -- <function notify_gesture_event at 0x20024ef0>
-      WaitMethods -- <class 'WaitMethods'>
-      RTTimer -- <class 'RTTimer'>
-      Timer -- <class 'Timer'>      [machine.Timer]
-      scratch -- <module 'util.scratch' from 'util/scratch.mpy'>
-      MoveMethods -- <class 'MoveMethods'>
+    ???
+
+.. function:: __connection_changed(???)
+
+    ???
+
+.. function:: init(???)
+
+    ???
+
+.. function:: start(???)
+
+    ???
+
+.. function:: pop_force_reset(???)
+
+    ???
+
+.. function:: get_event_loop(???)
+
+    ???
+
+.. function:: notify_gesture_event(???)
+
+    ???
+
+Constants
+---------
+
+.. data:: TIMER_PACE_HIGH = 16
+
+   ???
+
+.. data:: BT_VCP = BT_VCP(0)
+
+   Reference to the BT_VCP object defining the bluetooth connection.
+
+.. data:: USB_VCP = USB_VCP(0)
+
+   Reference to the USB_VCP object defining the USB connection.
+
+.. data:: error_handler
+
+   Reference to the main error handler object (type util.error_handler.ErrorHandler).
+
+.. data:: system
+
+   Reference to the main system object (type system.System).
+
+Imports
+-------
+
+* Module hub
+* Module runtime
+* Module util.scratch
+* Module util.sensors
+* Class LinegraphMonitorMethods from commands module
+* Class SoundMethods from commands module
+* Class ProgramRunner from programrunner module
+* Class HubUI from ui module
+* Class LightMethods from commands module
+* Class ProgramMethods from commands module
+* Class MotorMethods from commands module
+* Class HubMethods from commands module
+* Class RPCProtocol from protocol module
+* Class WaitMethods from commands module
+* Class RTTimer from util.resetter module
+* Class Timer from machine module
+* Class MoveMethods from commands module
