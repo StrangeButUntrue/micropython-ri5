@@ -77,35 +77,43 @@ Functions
 Constants
 ---------
 
-.. data:: _EMPTY_DICT = {}
+.. data:: _EMPTY_DICT
+   :value: {}
 
    ???
 
-.. data:: LPF2_FLIPPER_DISTANCE = 62
+.. data:: LPF2_FLIPPER_DISTANCE
+   :value: 62
 
    ???
 
-.. data:: PROGRAM_TYPE_PYTHON = python
+.. data:: PROGRAM_TYPE_PYTHON
+   :value: python
 
    ???
 
-.. data:: PROGRAM_TYPE_SCRATCH = scratch
+.. data:: PROGRAM_TYPE_SCRATCH
+   :value: scratch
 
    ???
 
-.. data:: PROGRAM_EXECUTION_ERROR = 0
+.. data:: PROGRAM_EXECUTION_ERROR
+   :value: 0
 
    ???
 
-.. data:: PROGRAM_EXECUTION_MEMORY_ERROR = 1
+.. data:: PROGRAM_EXECUTION_MEMORY_ERROR
+   :value: 1
 
    ???
 
-.. data:: TIMER_PACE_LOW = 48
+.. data:: TIMER_PACE_LOW
+   :value: 48
 
    ???
 
-.. data:: TIMER_PACE_HIGH = 16
+.. data:: TIMER_PACE_HIGH
+   :value: 16
 
    ???
 
@@ -122,8 +130,8 @@ Imports
 * Module `hub`
 * Module `gc`
 * Module `protocol.notifications`
-* Class `VirtualMachine` from `runtime.virtualmachine`
-* Function `const` from `micropython`
+* Class `runtime.virtualmachine.VirtualMachine`
+* Function `micropython.const`
 
 Class ProgramRunner
 -------------------

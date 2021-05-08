@@ -67,20 +67,20 @@ Constants
 Imports
 -------
 
-* Module :mod:`hub`
-* Module :mod:`runtime`
-* Module :mod:`util.scratch`
-* Module :mod:`util.sensors`
-* Class :class:`LinegraphMonitorMethods` from :mod:`commands` module
-* Class :class:`SoundMethods` from :mod:`commands` module
-* Class :class:`programrunner.ProgramRunner`
-* Class :class:`HubUI` from :mod:`ui.hubui` module
-* Class :class:`LightMethods` from :mod:`commands` module
-* Class :class:`ProgramMethods` from :mod:`commands` module
-* Class :class:`MotorMethods` from :mod:`commands` module
-* Class :class:`HubMethods` from :mod:`commands` module
-* Class :class:`RPCProtocol` from :mod:`protocol` module
-* Class :class:`WaitMethods` from :mod:`commands` module
-* Class :class:`RTTimer` from :mod:`util.resetter` module
-* Class :class:`machine.Timer`
-* Class :class:`MoveMethods` from :mod:`commands` module
+* Module `hub`
+* Module `runtime`
+* Module `util.scratch`
+* Module `util.sensors`
+* Class `commands.LinegraphMonitorMethods`
+* Class `commands.SoundMethods`
+* Class `programrunner.ProgramRunner`
+* Class `ui.hubui.HubUI`
+* Class `commands.LightMethods`
+* Class `commands.ProgramMethods`
+* Class `commands.MotorMethods`
+* Class `commands.HubMethods`
+* Class `protocol.RPCProtocol`
+* Class `commands.WaitMethods`
+* Class `util.resetter.RTTimer`
+* Class `machine.Timer`
+* Class `commands.MoveMethods`
