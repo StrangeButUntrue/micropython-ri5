@@ -1,6 +1,9 @@
 :mod:`commands` -- commands module
 ==================================
 
+.. module:: commands
+   :synopsis: commands module
+
 Module containing a lot of high-level concepts, but no obvious theme beyond that.
 
 Raw module data

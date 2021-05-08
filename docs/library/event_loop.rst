@@ -1,8 +1,11 @@
 :mod:`event_loop` -- event_loop module
 ======================================
 
-Event loop class - this seems to be the main scheduler on the Hub, called by
-the `hub_runtime` module's `start()` procedure.
+.. module:: event_loop
+   :synopsis: event_loop module
+
+Home of the Event loop class - this seems to be the main scheduler on the Hub,
+called by the `hub_runtime` module's `start()` procedure.
 
 Raw module data
 ---------------

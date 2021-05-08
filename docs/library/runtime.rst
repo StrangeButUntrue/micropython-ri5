@@ -1,6 +1,9 @@
 :mod:`runtime` -- runtime module
 ================================
 
+.. module:: runtime
+   :synopsis: runtime module
+
 Contains mainly stack and virtual machine details needed to run programs on the
 hub.
 

@@ -1,8 +1,12 @@
-:mod:`ui` -- menu system
-========================
+:mod:`ui.hubui` -- menu system
+==============================
+
+.. module:: ui.hubui
+   :synopsis: menu system
 
 Runs the menu system that you see when you boot up the Hub (and between running
-programs).
+programs).  The entire functionality is contained in submodule ui.hubui,
+although the main module also imports the ui.hubui.HubUI class as ui.HubUI.
 
 Raw module data
 ---------------

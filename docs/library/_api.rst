@@ -1,6 +1,9 @@
 :mod:`_api` -- user API
 =======================
 
+.. module:: _api
+   :synopsis: user API
+
 This module contains most of the API functions that you're meant to call to
 operate the system as a user.  The module itself is actually a backend to
 modules `mindstorms` and `spike`, which are nearly identical and seem to exist

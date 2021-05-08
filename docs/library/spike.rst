@@ -1,6 +1,9 @@
 :mod:`spike` -- Spike Prime branding of the user API
 ====================================================
 
+.. module:: spike
+   :synopsis: Spike Prime branding of the user API
+
 This module seems to be purely designed as a frontend for the `_api` module,
 so that Spike Prime documentation can tell its users to import a module with a
 related name.

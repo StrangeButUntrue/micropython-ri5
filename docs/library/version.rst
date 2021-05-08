@@ -1,5 +1,8 @@
-:mod:`version` -- Version module
+:mod:`version` -- version module
 ================================
+
+.. module:: version
+   :synopsis: version module
 
 Just contains the version!
 

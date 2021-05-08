@@ -1,6 +1,9 @@
 :mod:`util` -- misc utility module
 ==================================
 
+.. module:: util
+   :synopsis: misc utility module
+
 Contains various miscellaneous utility sub-modules.
 
 Raw module data

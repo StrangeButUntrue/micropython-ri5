@@ -1,6 +1,9 @@
 :mod:`protocol` -- RI5 communication protocol
 =============================================
 
+.. module:: protocol
+   :synopsis: RI5 communication protocol
+
 This module handles the communication protocol that the RI5 uses when talking
 over USB/Bluetooth to a controller app.  The protocol uses a specific json
 format.

@@ -1,6 +1,9 @@
 :mod:`hub_runtime` -- Hub main module
 =====================================
 
+.. module:: hub_runtime
+   :synopsis: Hub main module
+
 Seems to be the main module on the Hub, in charge of startup and error
 handling.
 
@@ -9,31 +12,31 @@ Functions
 
 .. function:: register_ports(???)
 
-    ???
+   ???
 
 .. function:: __connection_changed(???)
 
-    ???
+   ???
 
 .. function:: init(???)
 
-    ???
+   ???
 
 .. function:: start(???)
 
-    ???
+   ???
 
 .. function:: pop_force_reset(???)
 
-    ???
+   ???
 
 .. function:: get_event_loop(???)
 
-    ???
+   ???
 
 .. function:: notify_gesture_event(???)
 
-    ???
+   ???
 
 Constants
 ---------
@@ -52,29 +55,29 @@ Constants
 
 .. data:: error_handler
 
-   Reference to the main error handler object (type util.error_handler.ErrorHandler).
+   Reference to the main error handler object (type :class:util.error_handler.ErrorHandler).
 
 .. data:: system
 
-   Reference to the main system object (type system.System).
+   Reference to the main system object (type :class:system.System).
 
 Imports
 -------
 
-* Module hub
-* Module runtime
-* Module util.scratch
-* Module util.sensors
-* Class LinegraphMonitorMethods from commands module
-* Class SoundMethods from commands module
-* Class ProgramRunner from programrunner module
-* Class HubUI from ui module
-* Class LightMethods from commands module
-* Class ProgramMethods from commands module
-* Class MotorMethods from commands module
-* Class HubMethods from commands module
-* Class RPCProtocol from protocol module
-* Class WaitMethods from commands module
-* Class RTTimer from util.resetter module
-* Class Timer from machine module
-* Class MoveMethods from commands module
+* Module :mod:hub
+* Module :mod:runtime
+* Module :mod:util.scratch
+* Module :mod:util.sensors
+* Class :class:LinegraphMonitorMethods from :mod:commands module
+* Class :class:SoundMethods from :mod:commands module
+* Class :class:ProgramRunner from :mod:programrunner module
+* Class :class:HubUI from :mod:ui module
+* Class :class:LightMethods from :mod:commands module
+* Class :class:ProgramMethods from :mod:commands module
+* Class :class:MotorMethods from :mod:commands module
+* Class :class:HubMethods from :mod:commands module
+* Class :class:RPCProtocol from :mod:protocol module
+* Class :class:WaitMethods from :mod:commands module
+* Class :class:RTTimer from :mod:util.resetter module
+* Class :class:Timer from :mod:machine module
+* Class :class:MoveMethods from :mod:commands module

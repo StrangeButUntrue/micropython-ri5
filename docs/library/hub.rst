@@ -1,5 +1,8 @@
-:mod:`hub` -- Hub brick functionality
+:mod:`hub` -- hub brick functionality
 =====================================
+
+.. module:: hub
+   :synopsis: hub brick functionality
 
 Classes and functions related to simple parts and abilities of the Hub brick
 itself, like buttons, ports, and internal sensors.

@@ -1,6 +1,9 @@
 :mod:`system` -- system module
 ==============================
 
+.. module:: system
+   :synopsis: system module
+
 Module containing a lot of high-level concepts, but no obvious theme beyond that.
 
 Raw module data
