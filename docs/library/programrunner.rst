@@ -117,13 +117,13 @@ Constants
 Imports
 -------
 
-* Module :mod:util.sensors
-* Module :mod:sys
-* Module :mod:hub
-* Module :mod:gc
-* Module :mod:protocol.notifications
-* Class :class:VirtualMachine from :mod:runtime.virtualmachine
-* Function :func:const from :mod:micropython
+* Module `util.sensors`
+* Module `sys`
+* Module `hub`
+* Module `gc`
+* Module `protocol.notifications`
+* Class `VirtualMachine` from `runtime.virtualmachine`
+* Function `const` from `micropython`
 
 Class ProgramRunner
 -------------------
@@ -132,8 +132,7 @@ Class ProgramRunner
 
    ???
 
-   Methods
-   ~~~~~~~
+   **Methods**
 
    .. method:: __init__(???)
 
@@ -163,8 +162,7 @@ Class ProgramRunner
 
       ???
 
-   Constants
-   ~~~~~~~~~
+   **Constants**
 
    .. data:: IDLE = 0
 
