@@ -57,14 +57,12 @@ Constants
    Reference to the USB_VCP object defining the USB connection.
 
 .. data:: error_handler
-   :type: :class:`util.error_handler.ErrorHandler`
 
-   Reference to the main error handler object.
+   Reference to the main error handler object.  (Type `util.error_handler.ErrorHandler`)
 
 .. data:: system
-   :type: `system.System`
 
-   Reference to the main system object.
+   Reference to the main system object.  (Type `system.System`)
 
 Imports
 -------
@@ -75,8 +73,8 @@ Imports
 * Module :mod:`util.sensors`
 * Class :class:`LinegraphMonitorMethods` from :mod:`commands` module
 * Class :class:`SoundMethods` from :mod:`commands` module
-* Class :class:`ProgramRunner` from :mod:`programrunner` module
-* Class :class:`HubUI` from :mod:`ui` module
+* Class :class:`programrunner.ProgramRunner`
+* Class :class:`HubUI` from :mod:`ui.hubui` module
 * Class :class:`LightMethods` from :mod:`commands` module
 * Class :class:`ProgramMethods` from :mod:`commands` module
 * Class :class:`MotorMethods` from :mod:`commands` module
@@ -84,5 +82,5 @@ Imports
 * Class :class:`RPCProtocol` from :mod:`protocol` module
 * Class :class:`WaitMethods` from :mod:`commands` module
 * Class :class:`RTTimer` from :mod:`util.resetter` module
-* Class :class:`Timer` from :mod:`machine` module
+* Class :class:`machine.Timer`
 * Class :class:`MoveMethods` from :mod:`commands` module

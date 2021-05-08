@@ -164,14 +164,17 @@ Class ProgramRunner
 
    **Constants**
 
-   .. data:: IDLE = 0
+   .. data:: IDLE
+      :value: 0
 
       ???
 
-   .. data:: RUNNING_NONBLOCKING = 1
+   .. data:: RUNNING_NONBLOCKING
+      :value: 1
 
       ???
 
-   .. data:: RUNNING_BLOCKING = 2
+   .. data:: RUNNING_BLOCKING
+      :value: 2
 
       ???
