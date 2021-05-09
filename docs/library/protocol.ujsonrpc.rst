@@ -1,23 +1,10 @@
-:mod:`protocol` -- RI5 communication protocol
-=============================================
+:mod:`protocol.ujsonrpc` -- ???
+===============================
 
-.. module:: protocol
-   :synopsis: RI5 communication protocol
+.. module:: protocol.ujsonrpc
+   :synopsis: ???
 
-This module handles the communication protocol that the RI5 uses when talking
-over USB/Bluetooth to a controller app.  The protocol uses a specific json
-format.  The base module has three submodules, and aliases
-protocol.rpc_protocol.RPCProtocol as protocol.RPCProtocol for convenience.
-
-Submodules
-----------
-
-.. toctree::
-   :maxdepth: 1
-
-   protocol.notifications.rst
-   protocol.rpc_protocol.rst
-   protocol.ujsonrpc.rst
+???
 
 Raw module data
 ---------------
@@ -66,53 +53,3 @@ Raw module data
       call -- <function call at 0x20023320>
       pending -- {}
       resume_suspended_msg -- <function resume_suspended_msg at 0x20023120>
-    object <module 'protocol.notifications' from 'protocol/notifications.mpy'> is of type module
-      notify_error_event -- <function notify_error_event at 0x20024f10>
-      notify_sensor_data -- <function notify_sensor_data at 0x200218d0>
-      hub -- <module 'hub'>
-      notify_storage_status -- <function notify_storage_status at 0x200218e0>
-      __name__ -- protocol.notifications
-      notify_stack_start -- <function notify_stack_start at 0x20024ed0>
-      notify_battery_status -- <function notify_battery_status at 0x200218f0>
-      sensor_data -- [[0, ()], [0, ()], [0, ()], [0, ()], [0, ()], [0, ()], (0, -805, 585), (3, 3, 0), (-3, 0, 54), '', 0]
-      get_storage_information -- <function get_storage_information at 0x20024d60>
-      notify_program_running -- <function notify_program_running at 0x20024f30>
-      notify_gesture_event -- <function notify_gesture_event at 0x20024ef0>
-      notify_info_status -- <function notify_info_status at 0x20023cb0>
-      mem_alloc -- <function>
-      b2a_base64 -- <function>
-      _RQ_LEN -- run_queue_len
-      battery_status -- [8.36, 100, True]
-      notify_vm_state -- <function notify_vm_state at 0x20024f00>
-      notify_stack_stop -- <function notify_stack_stop at 0x20024ee0>
-      __file__ -- protocol/notifications.mpy
-      const -- <function>
-      notify_linegraph_timer_reset -- <function notify_linegraph_timer_reset at 0x20024f50>
-      _MEM -- mem_alloc
-      _D -- mem_delta
-      _DEBUG_PAYLOAD -- {'wait_queue_len': 0, 'mem_delta': 0, 'run_queue_len': 0, 'mem_alloc': 0}
-      _WQ_LEN -- wait_queue_len
-      read_local_name -- <function read_local_name at 0x20024da0>
-      notify_debug_event -- <function notify_debug_event at 0x200250c0>
-      notify_button_event -- <function notify_button_event at 0x20024ec0>
-      notify_gesture_status -- <function notify_gesture_status at 0x20023ca0>
-    object <module 'protocol.rpc_protocol' from 'protocol/rpc_protocol.mpy'> is of type module
-      const -- <function>
-      update_sensor_data -- <function update_sensor_data at 0x20022130>
-      notify_debug_event -- <function notify_debug_event at 0x200250c0>
-      get_event_loop -- <function get_event_loop at 0x2001ca30>
-      __file__ -- protocol/rpc_protocol.mpy
-      __name__ -- protocol.rpc_protocol
-      RPCProtocol -- <class 'RPCProtocol'>
-      JSONRPC -- <class 'JSONRPC'>
-      update_battery_status -- <function update_battery_status at 0x20022140>
-      notify_sensor_data -- <function notify_sensor_data at 0x200218d0>
-      notify_battery_status -- <function notify_battery_status at 0x200218f0>
-    object <class 'RPCProtocol'> is of type type
-      register_method_handlers -- <function register_method_handlers at 0x20025190>
-      stream -- <property>
-      __init__ -- <function __init__ at 0x20023390>
-      __qualname__ -- RPCProtocol
-      _register_method_handler -- <function _register_method_handler at 0x200233a0>
-      looper -- <generator>
-      __module__ -- protocol.rpc_protocol
