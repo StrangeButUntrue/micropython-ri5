@@ -5,43 +5,52 @@
    :synopsis: event_loop module
 
 Home of the Event loop class - this seems to be the main scheduler on the Hub,
-called by the `hub_runtime` module's `start()` procedure.
+called by the `hub_runtime` module's `start()` procedure.  The EventLoop class
+(along with the imports) seem to technically live inside an event_loop.event_loop
+submodule, but the class is also available inside event_loop itself, so the
+submodule isn't necessary to know about.
 
-Raw module data
+Functions
+---------
+.. function:: get_event_loop(???)
+
+   ???
+
+Constants
+---------
+.. data:: _EVENT_LOOP
+
+   Reference to the main event loop object (type EventLoop).
+
+Class EventLoop
 ---------------
 
-::
+.. class:: EventLoop(???)
 
-    object <module 'event_loop' from 'event_loop/__init__.mpy'> is of type module
-      __path__ -- event_loop
-      event_loop -- <module 'event_loop.event_loop' from 'event_loop/event_loop.mpy'>
-      __name__ -- event_loop
-      __file__ -- event_loop/__init__.mpy
-      _EVENT_LOOP -- <EventLoop object at 20033160>
-      EventLoop -- <class 'EventLoop'>
-      get_event_loop -- <function get_event_loop at 0x2001ca30>
-    object <module 'event_loop.event_loop' from 'event_loop/event_loop.mpy'> is of type module
-      __name__ -- event_loop.event_loop
-      ucollections -- <module 'ucollections'>
-      EventLoop -- <class 'EventLoop'>
-      __file__ -- event_loop/event_loop.mpy
-      utimeq -- <module 'utimeq'>
-      utime -- <module 'utime'>
-    object <class 'EventLoop'> is of type type
-      _discard -- <function _discard at 0x2001d570>
-      __init__ -- <function __init__ at 0x2001d550>
-      step -- <generator>
-      __qualname__ -- EventLoop
-      cancel -- <function cancel at 0x2001d510>
-      call_soon -- <function call_soon at 0x2001ce40>
-      run_forever -- <function run_forever at 0x2001d5c0>
-      __module__ -- event_loop.event_loop
-    object <EventLoop object at 20033160> is of type EventLoop
-      _discard -- <function _discard at 0x2001d570>
-      __init__ -- <function __init__ at 0x2001d550>
-      step -- <generator>
-      __qualname__ -- EventLoop
-      cancel -- <function cancel at 0x2001d510>
-      call_soon -- <function call_soon at 0x2001ce40>
-      run_forever -- <function run_forever at 0x2001d5c0>
-      __module__ -- event_loop.event_loop
+   ???
+
+   .. method:: _discard(???)
+
+      ???
+
+   .. method:: step(???)
+
+      Generator function.  ???
+
+   .. method:: cancel(???)
+
+      ???
+
+   .. method:: call_soon(???)
+
+      ???
+
+   .. method:: run_forever(???)
+
+      ???
+
+Imports
+-------
+* Module `ucollections`
+* Module `utimeq`
+* Module `utime`

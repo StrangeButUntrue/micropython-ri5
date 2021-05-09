@@ -10,43 +10,7 @@ programs that live in the program slots on the system).
 Functions
 ---------
 
-.. function:: wait_until_ready_after_restart(???)
-
-   ???
-
-.. function:: rotate_hub_display_to_orientation(???)
-
-   ???
-
-.. function:: get_path(???)
-
-   ???
-
 .. function:: filter_dict_len(???)
-
-   ???
-
-.. function:: set_force_reset(???)
-
-   ???
-
-.. function:: reset_time(???)
-
-   ???
-
-.. function:: get_program_project_id(???)
-
-   ???
-
-.. function:: stop_time(???)
-
-   ???
-
-.. function:: get_program_type(???)
-
-   ???
-
-.. function:: get_event_loop(???)
 
    ???
 
@@ -82,41 +46,6 @@ Constants
 
    ???
 
-.. data:: LPF2_FLIPPER_DISTANCE
-   :value: 62
-
-   ???
-
-.. data:: PROGRAM_TYPE_PYTHON
-   :value: python
-
-   ???
-
-.. data:: PROGRAM_TYPE_SCRATCH
-   :value: scratch
-
-   ???
-
-.. data:: PROGRAM_EXECUTION_ERROR
-   :value: 0
-
-   ???
-
-.. data:: PROGRAM_EXECUTION_MEMORY_ERROR
-   :value: 1
-
-   ???
-
-.. data:: TIMER_PACE_LOW
-   :value: 48
-
-   ???
-
-.. data:: TIMER_PACE_HIGH
-   :value: 16
-
-   ???
-
 .. data:: error_handler
 
    Reference to the main error handler object (type
@@ -130,10 +59,6 @@ Class ProgramRunner
    ???
 
    **Methods**
-
-   .. method:: __init__(???)
-
-      ???
 
    .. method:: vm_has_extension(???)
 
@@ -186,3 +111,19 @@ Imports
 * Module `protocol.notifications`
 * Class `runtime.virtualmachine.VirtualMachine`
 * Function `micropython.const`
+* Function `event_loop.get_event_loop`
+* Function `util.resetter.wait_until_ready_after_restart`
+* Function `util.rotation.rotate_hub_display_to_orientation`
+* Function `util.storage.get_path`
+* Function `util.storage.set_force_reset`
+* Function `util.storage.get_program_project_id`
+* Function `util.storage.get_program_type`
+* Function `util.time.reset_time`
+* Function `util.time.stop_time`
+* Constant `util.constants.LPF2_FLIPPER_DISTANCE` = 62
+* Constant `util.constants.TIMER_PACE_LOW` = 48
+* Constant `util.constants.TIMER_PACE_HIGH` = 16
+* Constant `util.storage.PROGRAM_TYPE_PYTHON` = python
+* Constant `util.storage.PROGRAM_TYPE_SCRATCH` = scratch
+* Constant `util.error_handler.PROGRAM_EXECUTION_ERROR` = 0
+* Constant `util.error_handler.PROGRAM_EXECUTION_MEMORY_ERROR` = 1

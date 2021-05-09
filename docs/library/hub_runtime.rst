@@ -10,10 +10,6 @@ handling.
 Functions
 ---------
 
-.. function:: register_ports(???)
-
-   ???
-
 .. function:: __connection_changed(???)
 
    ???
@@ -26,25 +22,8 @@ Functions
 
    ???
 
-.. function:: pop_force_reset(???)
-
-   ???
-
-.. function:: get_event_loop(???)
-
-   ???
-
-.. function:: notify_gesture_event(???)
-
-   ???
-
 Constants
 ---------
-
-.. data:: TIMER_PACE_HIGH
-   :value: 16
-
-   ???
 
 .. data:: BT_VCP
    :value: BT_VCP(0)
@@ -84,3 +63,8 @@ Imports
 * Class `util.resetter.RTTimer`
 * Class `machine.Timer`
 * Class `commands.MoveMethods`
+* Function `event_loop.get_event_loop`
+* Function `protocol.notifications.notify_gesture_event`
+* Function `util.sensors.register_ports`
+* Function `util.storage.pop_force_reset`
+* Constant `util.constants.TIMER_PACE_HIGH` (= 16)
