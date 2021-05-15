@@ -22,27 +22,6 @@ Functions
 
    ???
 
-Constants
----------
-
-.. data:: BT_VCP
-   :value: BT_VCP(0)
-
-   Reference to the BT_VCP object defining the bluetooth connection.
-
-.. data:: USB_VCP
-   :value: USB_VCP(0)
-
-   Reference to the USB_VCP object defining the USB connection.
-
-.. data:: error_handler
-
-   Reference to the main error handler object.  (Type `util.error_handler.ErrorHandler`)
-
-.. data:: system
-
-   Reference to the main system object.  (Type `system.System`)
-
 Imports
 -------
 
@@ -67,4 +46,8 @@ Imports
 * Function `protocol.notifications.notify_gesture_event`
 * Function `util.sensors.register_ports`
 * Function `util.storage.pop_force_reset`
-* Constant `util.constants.TIMER_PACE_HIGH` (= 16)
+* Constant `system.system` = <Main System object>
+* Constant `util.constants.BT_VCP` = BT_VCP(0) <Bluetooth connection object>
+* Constant `util.constants.USB_VCP` = USB_VCP(0) <USB connection object>
+* Constant `util.constants.TIMER_PACE_HIGH` = 16
+* Constant `util.error_handler.error_handler` = <Main ErrorHandler object>

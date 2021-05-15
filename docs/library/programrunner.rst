@@ -46,11 +46,6 @@ Constants
 
    ???
 
-.. data:: error_handler
-
-   Reference to the main error handler object (type
-   :class:util.error_handler.ErrorHandler).
-
 Class ProgramRunner
 -------------------
 
@@ -127,3 +122,4 @@ Imports
 * Constant `util.storage.PROGRAM_TYPE_SCRATCH` = scratch
 * Constant `util.error_handler.PROGRAM_EXECUTION_ERROR` = 0
 * Constant `util.error_handler.PROGRAM_EXECUTION_MEMORY_ERROR` = 1
+* Constant `util.error_handler.error_handler` = <Main ErrorHandler object>
