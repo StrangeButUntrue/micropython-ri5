@@ -4,35 +4,83 @@
 .. module:: runtime.stack
    :synopsis: ???
 
-???
+Contains the Stack class.  ???
 
-Raw module data
----------------
+Stack Class
+-----------
 
-::
+.. class:: Stack(???)
 
-    object <module 'runtime.stack' from 'runtime/stack.mpy'> is of type module
-      const -- <function>
-      __name__ -- runtime.stack
-      notify_stack_start -- <function notify_stack_start at 0x20024ed0>
-      __file__ -- runtime/stack.mpy
-      notify_stack_stop -- <function notify_stack_stop at 0x20024ee0>
-      Stack -- <class 'Stack'>
-    object <class 'Stack'> is of type type
-      STATUS_RUNNING -- 10
-      is_active -- <function is_active at 0x20036de0>
-      STATUS_WAITING -- 30
-      should_start -- <function should_start at 0x20036df0>
-      _check_condition -- <generator>
-      ON_GESTURE -- 3
-      __qualname__ -- Stack
-      ON_BUTTON -- 2
-      __init__ -- <function __init__ at 0x20036e20>
-      ON_START -- 0
-      ON_BROADCAST -- 1
-      STATUS_IDLE -- 20
-      stop -- <function stop at 0x20036dc0>
-      restart -- <function restart at 0x20036dd0>
-      __module__ -- runtime.stack
-      start -- <function start at 0x20036db0>
-      ON_CONDITION -- 4
+   ???
+
+   **Methods**
+   .. method:: is_active(???)
+
+      ???
+
+   .. method:: should_start(???)
+
+      ???
+
+   .. method:: _check_condition(???)
+
+      Generator function.  ???
+
+   .. method:: stop(???)
+
+      ???
+
+   .. method:: restart(???)
+
+      ???
+
+   .. method:: start(???)
+
+      ???
+
+   **Constants**
+   .. data:: STATUS_RUNNING
+      :value: 10
+
+      ???
+
+   .. data:: STATUS_IDLE
+      :value: 20
+
+      ???
+
+   .. data:: STATUS_WAITING
+      :value: 30
+
+      ???
+
+   .. data:: ON_START
+      :value: 0
+
+      ???
+
+   .. data:: ON_BROADCAST
+      :value: 1
+
+      ???
+
+   .. data:: ON_BUTTON
+      :value: 2
+
+      ???
+
+   .. data:: ON_GESTURE
+      :value: 3
+
+      ???
+
+   .. data:: ON_CONDITION
+      :value: 4
+
+      ???
+
+Imports
+-------
+* Function `micropython.const`
+* Function `protocol.notifications.notify_stack_start`
+* Function `protocol.notifications.notify_stack_stop`

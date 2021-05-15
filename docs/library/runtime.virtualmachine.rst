@@ -4,43 +4,86 @@
 .. module:: runtime.virtualmachine
    :synopsis: ???
 
-???
+Contains the VirtualMachine class.  ???
 
-Raw module data
----------------
+VirtualMachine Class
+--------------------
 
-::
+.. class:: VirtualMachine(???)
 
-    object <module 'runtime.virtualmachine' from 'runtime/virtualmachine.mpy'> is of type module
-      hub -- <module 'hub'>
-      VMStore -- <class 'VMStore'>
-      DirtyDict -- <class 'DirtyDict'>
-      __file__ -- runtime/virtualmachine.mpy
-      reset_time -- <function reset_time at 0x20021460>
-      JSONRPC -- <class 'JSONRPC'>
-      get_time -- <function get_time at 0x20021830>
-      __name__ -- runtime.virtualmachine
-      timer -- <module 'runtime.timer' from 'runtime/timer.mpy'>
-      PORTS -- {'C': Port(C), 'B': Port(B), 'D': Port(D), 'E': Port(E), 'A': Port(A), 'F': Port(F)}
-      VirtualMachine -- <class 'VirtualMachine'>
-      Stack -- <class 'Stack'>
-      System -- <class 'System'>
-    object <class 'VirtualMachine'> is of type type
-      register_on_condition -- <function register_on_condition at 0x20039a70>
-      register_on_start -- <function register_on_start at 0x20039a30>
-      reset_time -- <function reset_time at 0x20039ba0>
-      shutdown -- <function shutdown at 0x20039b80>
-      register_callback -- <function register_callback at 0x20039af0>
-      register_on_gesture -- <function register_on_gesture at 0x20039a60>
-      register_on_button -- <function register_on_button at 0x20039a80>
-      __module__ -- runtime.virtualmachine
-      reset_timer -- <function reset_timer at 0x20039b90>
-      stop_stacks -- <function stop_stacks at 0x20039b60>
-      schedule_coroutine -- <function schedule_coroutine at 0x20039b30>
-      __qualname__ -- VirtualMachine
-      __init__ -- <function __init__ at 0x20039a40>
-      broadcast -- <function broadcast at 0x20039b00>
-      check_all_conditions -- <generator>
-      get_time -- <function get_time at 0x20039bb0>
-      register_on_broadcast -- <function register_on_broadcast at 0x20039a50>
-      start -- <function start at 0x20039b20>
+   ???
+
+   **Methods**
+
+   .. method:: register_on_condition(???)
+
+      ???
+
+   .. method:: register_on_start(???)
+
+      ???
+
+   .. method:: register_callback(???)
+
+      ???
+
+   .. method:: register_on_gesture(???)
+
+      ???
+
+   .. method:: register_on_button(???)
+
+      ???
+
+   .. method:: register_on_broadcast(???)
+
+      ???
+
+   .. method:: reset_time(???)
+
+      ???
+
+   .. method:: shutdown(???)
+
+      ???
+
+   .. method:: reset_timer(???)
+
+      ???
+
+   .. method:: stop_stacks(???)
+
+      ???
+
+   .. method:: schedule_coroutine(???)
+
+      ???
+
+   .. method:: broadcast(???)
+
+      ???
+
+   .. method:: check_all_conditions(???)
+
+      Generator function.  ???
+
+   .. method:: get_time(???)
+
+      ???
+
+   .. method:: start(???)
+
+      ???
+
+Imports
+-------
+* Module `hub`
+* Module `runtime.timer`
+* Class `protocol.ujsonrpc.JSONRPC`
+* Class `runtime.dirty_dict.DirtyDict`
+* Class `runtime.stack.Stack`
+* Class `runtime.vm_store.VMStore`
+* Class `system.System`
+* Function `util.time.get_time`
+* Function `util.time.reset_time`
+* Constant `util.constants.PORTS` = {'C': Port(C), 'B': Port(B), 'D': Port(D), 'E': Port(E), 'A': Port(A), 'F': Port(F)}

@@ -6,47 +6,142 @@
 
 ???
 
-Raw module data
----------------
+Functions
+---------
+.. function:: add_prop(???)
 
-::
+   ???
 
-    object <module 'runtime.vm_store' from 'runtime/vm_store.mpy'> is of type module
-      _STOP -- 1
-      __file__ -- runtime/vm_store.mpy
-      DirtyDict -- <class 'DirtyDict'>
-      _STALL -- True
-      const -- <function>
-      _PCALIB -- 17.5
-      _LOC -- Billund
-      _PAIR -- ('A', 'B')
-      SUCCESS -- 0
-      __name__ -- runtime.vm_store
-      BRAKE -- 1
-      _STAT -- 0
-      _ACCEL -- (None, None)
-      add_prop -- <function add_prop at 0x20038ed0>
-      add_port_prop -- <function add_port_prop at 0x20038ee0>
-      VMStore -- <class 'VMStore'>
-    object <class 'VMStore'> is of type type
-      move_speed -- <closure>
-      weather_location -- <closure>
-      weather_offset -- <closure>
-      move_last_status -- <closure>
-      motor_acceleration -- <closure>
-      move_stop -- <closure>
-      motor_stall -- <closure>
-      move_calibration -- <closure>
-      __module__ -- runtime.vm_store
-      music_tempo -- <closure>
-      move_acceleration -- <closure>
-      sound_pitch -- <closure>
-      music_instrument -- <closure>
-      __qualname__ -- VMStore
-      move_pair -- <closure>
-      motor_last_status -- <closure>
-      display_brightness -- <closure>
-      motor_speed -- <closure>
-      sound_volume -- <closure>
-      sound_pan -- <closure>
-      motor_stop -- <closure>
+.. function:: add_port_prop(???)
+
+   ???
+
+Constants
+---------
+
+.. data:: _STOP
+   :value: 1
+
+   ???
+
+.. data:: _STALL
+   :value: True
+
+   ???
+
+.. data:: _PCALIB
+   :value: 17.5
+
+   ???
+
+.. data:: _LOC
+   :value: Billund
+
+   ???
+
+.. data:: _PAIR
+   :value: ('A', 'B')
+
+   ???
+
+.. data:: _STAT
+   :value: 0
+
+   ???
+
+.. data:: _ACCEL
+   :value: (None, None)
+
+   ???
+
+VMStore Class
+-------------
+
+.. class:: VMStore(???)
+
+   ???
+
+   **Methods**
+
+   .. method:: move_speed(???)
+
+      Closure function.  ???
+
+   .. method:: move_last_status(???)
+
+      Closure function.  ???
+
+   .. method:: move_stop(???)
+
+      Closure function.  ???
+
+   .. method:: move_calibration(???)
+
+      Closure function.  ???
+
+   .. method:: move_acceleration(???)
+
+      Closure function.  ???
+
+   .. method:: move_pair(???)
+
+      Closure function.  ???
+
+   .. method:: motor_acceleration(???)
+
+      Closure function.  ???
+
+   .. method:: motor_stall(???)
+
+      Closure function.  ???
+
+   .. method:: motor_last_status(???)
+
+      Closure function.  ???
+
+   .. method:: motor_speed(???)
+
+      Closure function.  ???
+
+   .. method:: motor_stop(???)
+
+      Closure function.  ???
+
+   .. method:: music_tempo(???)
+
+      Closure function.  ???
+
+   .. method:: music_instrument(???)
+
+      Closure function.  ???
+
+   .. method:: sound_pitch(???)
+
+      Closure function.  ???
+
+   .. method:: sound_volume(???)
+
+      Closure function.  ???
+
+   .. method:: sound_pan(???)
+
+      Closure function.  ???
+
+   .. method:: weather_location(???)
+
+      Closure function.  ???
+
+   .. method:: weather_offset(???)
+
+      Closure function.  ???
+
+   .. method:: display_brightness(???)
+
+      Closure function.  ???
+
+Imports
+-------
+* Class `runtime.dirty_dict.DirtyDict`
+* Function `micropython.const
+* Constant `util.constants.BRAKE` = 1
+* Constant `util.constants.SUCCESS` = 0

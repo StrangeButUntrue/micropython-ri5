@@ -59,7 +59,7 @@ Constants
 
    ???
 
-Class JSONRPC
+JSONRPC Class
 -------------
 .. class:: JSONRPC(???)
 
