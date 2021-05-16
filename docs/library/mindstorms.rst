@@ -15,5 +15,9 @@ Classes
 -------
 .. class:: MSHub()
 
-    Appears to have no methods and no obvious function, except perhaps as a
-    way to distinguish this module from `spike`.
+    The actual class appears to have no methods or functions of its own, but it
+    seems to be a superclass of `_api.large_technic_hub.LargeTechnicHub` so
+    inherits everything from there.
+
+    The API expects most access to the central Technic Hub and its functions to
+    use an instance of this class.

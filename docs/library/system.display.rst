@@ -17,7 +17,7 @@ Functions
 DisplayWrapper Class
 --------------------
 
-.. class:: (???)
+.. class:: DisplayWrapper(???)
 
    ???
 
